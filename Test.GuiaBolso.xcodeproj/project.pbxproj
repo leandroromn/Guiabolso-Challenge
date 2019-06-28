@@ -23,6 +23,10 @@
 		FDE4864922C5AD9F003C0E83 /* CategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4864322C5AD9F003C0E83 /* CategoriesInteractor.swift */; };
 		FDE4864C22C5ADC4003C0E83 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE4864B22C5ADC4003C0E83 /* Categories.storyboard */; };
 		FDE4865222C5AF51003C0E83 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4865122C5AF51003C0E83 /* R.generated.swift */; };
+		FDE4865522C5AFEB003C0E83 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4865422C5AFEB003C0E83 /* Endpoint.swift */; };
+		FDE4865722C5B03F003C0E83 /* Networking.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDE4865622C5B03F003C0E83 /* Networking.strings */; };
+		FDE4865922C5B08C003C0E83 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4865822C5B08C003C0E83 /* NetworkProvider.swift */; };
+		FDE4865C22C5B22F003C0E83 /* Endpoint+Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4865B22C5B22F003C0E83 /* Endpoint+Categories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 		FDE4864322C5AD9F003C0E83 /* CategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInteractor.swift; sourceTree = "<group>"; };
 		FDE4864B22C5ADC4003C0E83 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		FDE4865122C5AF51003C0E83 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		FDE4865422C5AFEB003C0E83 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		FDE4865622C5B03F003C0E83 /* Networking.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Networking.strings; sourceTree = "<group>"; };
+		FDE4865822C5B08C003C0E83 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		FDE4865B22C5B22F003C0E83 /* Endpoint+Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Categories.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				FDE4863C22C5ACBD003C0E83 /* Scenes */,
+				FDE4865322C5AFDE003C0E83 /* Networking */,
 				FDE4863A22C5AC98003C0E83 /* Support Files */,
 				FDE4863B22C5ACA2003C0E83 /* Resources */,
 			);
@@ -221,6 +230,25 @@
 				FDE4864B22C5ADC4003C0E83 /* Categories.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FDE4865322C5AFDE003C0E83 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FDE4865622C5B03F003C0E83 /* Networking.strings */,
+				FDE4865422C5AFEB003C0E83 /* Endpoint.swift */,
+				FDE4865822C5B08C003C0E83 /* NetworkProvider.swift */,
+				FDE4865A22C5B224003C0E83 /* Endpoint Providers */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FDE4865A22C5B224003C0E83 /* Endpoint Providers */ = {
+			isa = PBXGroup;
+			children = (
+				FDE4865B22C5B22F003C0E83 /* Endpoint+Categories.swift */,
+			);
+			path = "Endpoint Providers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +363,7 @@
 			files = (
 				FDD7BDFC22C5A86700B991F5 /* LaunchScreen.storyboard in Resources */,
 				FDE4864C22C5ADC4003C0E83 /* Categories.storyboard in Resources */,
+				FDE4865722C5B03F003C0E83 /* Networking.strings in Resources */,
 				FDD7BDF922C5A86700B991F5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,7 +528,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE4865C22C5B22F003C0E83 /* Endpoint+Categories.swift in Sources */,
 				FDE4864722C5AD9F003C0E83 /* CategoriesModels.swift in Sources */,
+				FDE4865522C5AFEB003C0E83 /* Endpoint.swift in Sources */,
 				FDE4864622C5AD9F003C0E83 /* CategoriesRouter.swift in Sources */,
 				FDE4864822C5AD9F003C0E83 /* CategoriesViewController.swift in Sources */,
 				FDE4865222C5AF51003C0E83 /* R.generated.swift in Sources */,
@@ -507,6 +538,7 @@
 				FDE4864922C5AD9F003C0E83 /* CategoriesInteractor.swift in Sources */,
 				FDD7BDF222C5A86600B991F5 /* AppDelegate.swift in Sources */,
 				FDE4864522C5AD9F003C0E83 /* CategoriesWorker.swift in Sources */,
+				FDE4865922C5B08C003C0E83 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
