@@ -11,12 +11,17 @@
 		236F345F862B53C7ADC63A64 /* Pods_Test_GuiaBolsoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C11A885308AC2164638288B /* Pods_Test_GuiaBolsoUITests.framework */; };
 		56305E44F2AD6FA6A63623D6 /* Pods_Test_GuiaBolsoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E0904816E3134680E0985F /* Pods_Test_GuiaBolsoTests.framework */; };
 		FDD7BDF222C5A86600B991F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7BDF122C5A86600B991F5 /* AppDelegate.swift */; };
-		FDD7BDF422C5A86600B991F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7BDF322C5A86600B991F5 /* ViewController.swift */; };
-		FDD7BDF722C5A86600B991F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD7BDF522C5A86600B991F5 /* Main.storyboard */; };
 		FDD7BDF922C5A86700B991F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD7BDF822C5A86700B991F5 /* Assets.xcassets */; };
 		FDD7BDFC22C5A86700B991F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD7BDFA22C5A86700B991F5 /* LaunchScreen.storyboard */; };
 		FDD7BE0722C5A86700B991F5 /* Test_GuiaBolsoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7BE0622C5A86700B991F5 /* Test_GuiaBolsoTests.swift */; };
 		FDD7BE1222C5A86700B991F5 /* Test_GuiaBolsoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7BE1122C5A86700B991F5 /* Test_GuiaBolsoUITests.swift */; };
+		FDE4864422C5AD9F003C0E83 /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4863E22C5AD9F003C0E83 /* CategoriesPresenter.swift */; };
+		FDE4864522C5AD9F003C0E83 /* CategoriesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4863F22C5AD9F003C0E83 /* CategoriesWorker.swift */; };
+		FDE4864622C5AD9F003C0E83 /* CategoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4864022C5AD9F003C0E83 /* CategoriesRouter.swift */; };
+		FDE4864722C5AD9F003C0E83 /* CategoriesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4864122C5AD9F003C0E83 /* CategoriesModels.swift */; };
+		FDE4864822C5AD9F003C0E83 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4864222C5AD9F003C0E83 /* CategoriesViewController.swift */; };
+		FDE4864922C5AD9F003C0E83 /* CategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4864322C5AD9F003C0E83 /* CategoriesInteractor.swift */; };
+		FDE4864C22C5ADC4003C0E83 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE4864B22C5ADC4003C0E83 /* Categories.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +53,6 @@
 		F4C0DFA07BA2FC9742622570 /* Pods-Test.GuiaBolsoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.GuiaBolsoTests.debug.xcconfig"; path = "Target Support Files/Pods-Test.GuiaBolsoTests/Pods-Test.GuiaBolsoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDD7BDEE22C5A86600B991F5 /* Test.GuiaBolso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.GuiaBolso.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD7BDF122C5A86600B991F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDD7BDF322C5A86600B991F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FDD7BDF622C5A86600B991F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDD7BDF822C5A86700B991F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDD7BDFB22C5A86700B991F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDD7BDFD22C5A86700B991F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +62,13 @@
 		FDD7BE0D22C5A86700B991F5 /* Test.GuiaBolsoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.GuiaBolsoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD7BE1122C5A86700B991F5 /* Test_GuiaBolsoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_GuiaBolsoUITests.swift; sourceTree = "<group>"; };
 		FDD7BE1322C5A86700B991F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDE4863E22C5AD9F003C0E83 /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
+		FDE4863F22C5AD9F003C0E83 /* CategoriesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesWorker.swift; sourceTree = "<group>"; };
+		FDE4864022C5AD9F003C0E83 /* CategoriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRouter.swift; sourceTree = "<group>"; };
+		FDE4864122C5AD9F003C0E83 /* CategoriesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModels.swift; sourceTree = "<group>"; };
+		FDE4864222C5AD9F003C0E83 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		FDE4864322C5AD9F003C0E83 /* CategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInteractor.swift; sourceTree = "<group>"; };
+		FDE4864B22C5ADC4003C0E83 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,12 +147,9 @@
 		FDD7BDF022C5A86600B991F5 /* Test.GuiaBolso */ = {
 			isa = PBXGroup;
 			children = (
-				FDD7BDF122C5A86600B991F5 /* AppDelegate.swift */,
-				FDD7BDF322C5A86600B991F5 /* ViewController.swift */,
-				FDD7BDF522C5A86600B991F5 /* Main.storyboard */,
-				FDD7BDF822C5A86700B991F5 /* Assets.xcassets */,
-				FDD7BDFA22C5A86700B991F5 /* LaunchScreen.storyboard */,
-				FDD7BDFD22C5A86700B991F5 /* Info.plist */,
+				FDE4863C22C5ACBD003C0E83 /* Scenes */,
+				FDE4863A22C5AC98003C0E83 /* Support Files */,
+				FDE4863B22C5ACA2003C0E83 /* Resources */,
 			);
 			path = Test.GuiaBolso;
 			sourceTree = "<group>";
@@ -163,6 +170,54 @@
 				FDD7BE1322C5A86700B991F5 /* Info.plist */,
 			);
 			path = Test.GuiaBolsoUITests;
+			sourceTree = "<group>";
+		};
+		FDE4863A22C5AC98003C0E83 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDD7BDFD22C5A86700B991F5 /* Info.plist */,
+				FDD7BDF122C5A86600B991F5 /* AppDelegate.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		FDE4863B22C5ACA2003C0E83 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FDD7BDFA22C5A86700B991F5 /* LaunchScreen.storyboard */,
+				FDD7BDF822C5A86700B991F5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FDE4863C22C5ACBD003C0E83 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FDE4863D22C5AD20003C0E83 /* Categories */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FDE4863D22C5AD20003C0E83 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FDE4864A22C5ADB6003C0E83 /* Views */,
+				FDE4864222C5AD9F003C0E83 /* CategoriesViewController.swift */,
+				FDE4864322C5AD9F003C0E83 /* CategoriesInteractor.swift */,
+				FDE4863E22C5AD9F003C0E83 /* CategoriesPresenter.swift */,
+				FDE4863F22C5AD9F003C0E83 /* CategoriesWorker.swift */,
+				FDE4864022C5AD9F003C0E83 /* CategoriesRouter.swift */,
+				FDE4864122C5AD9F003C0E83 /* CategoriesModels.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		FDE4864A22C5ADB6003C0E83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDE4864B22C5ADC4003C0E83 /* Categories.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +330,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDD7BDFC22C5A86700B991F5 /* LaunchScreen.storyboard in Resources */,
+				FDE4864C22C5ADC4003C0E83 /* Categories.storyboard in Resources */,
 				FDD7BDF922C5A86700B991F5 /* Assets.xcassets in Resources */,
-				FDD7BDF722C5A86600B991F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,8 +475,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD7BDF422C5A86600B991F5 /* ViewController.swift in Sources */,
+				FDE4864722C5AD9F003C0E83 /* CategoriesModels.swift in Sources */,
+				FDE4864622C5AD9F003C0E83 /* CategoriesRouter.swift in Sources */,
+				FDE4864822C5AD9F003C0E83 /* CategoriesViewController.swift in Sources */,
+				FDE4864422C5AD9F003C0E83 /* CategoriesPresenter.swift in Sources */,
+				FDE4864922C5AD9F003C0E83 /* CategoriesInteractor.swift in Sources */,
 				FDD7BDF222C5A86600B991F5 /* AppDelegate.swift in Sources */,
+				FDE4864522C5AD9F003C0E83 /* CategoriesWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,14 +517,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FDD7BDF522C5A86600B991F5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FDD7BDF622C5A86600B991F5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FDD7BDFA22C5A86700B991F5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -598,7 +650,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Test.GuiaBolso/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Test.GuiaBolso/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -617,7 +669,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Test.GuiaBolso/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Test.GuiaBolso/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
