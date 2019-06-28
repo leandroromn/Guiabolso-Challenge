@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JokeViewController" customModule="Test_GuiaBolso" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="4Ue-SA-3Fn" id="U1i-mo-HJh"/>
+                <outlet property="avatarImageView" destination="N9s-dk-oQo" id="yUr-Fh-BoC"/>
+                <outlet property="contentView" destination="5AL-WX-64M" id="ciX-Mh-a9z"/>
+                <outlet property="jokePhraseLabel" destination="fJy-WD-1Xu" id="RCy-Qr-HmA"/>
+                <outlet property="view" destination="iN0-l3-epB" id="fDF-Js-9Py"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4Ue-SA-3Fn">
+                    <rect key="frame" x="197" y="443" width="20" height="20"/>
+                </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5AL-WX-64M" userLabel="Content View">
+                    <rect key="frame" x="8" y="52" width="398" height="810"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N9s-dk-oQo">
+                            <rect key="frame" x="169" y="36" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="WUK-Tg-nSz"/>
+                                <constraint firstAttribute="height" constant="60" id="Y12-IG-2Bx"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="fJy-WD-1Xu">
+                            <rect key="frame" x="12" y="108" width="374" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1w-fd-L5s" customClass="VisitPageButton" customModule="Test_GuiaBolso" customModuleProvider="target">
+                            <rect key="frame" x="12" y="768" width="374" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="openJokeLinkAct:" destination="-1" eventType="touchUpInside" id="CKB-hg-qep"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="f1w-fd-L5s" secondAttribute="trailing" constant="12" id="1dC-tX-Sre"/>
+                        <constraint firstItem="f1w-fd-L5s" firstAttribute="leading" secondItem="5AL-WX-64M" secondAttribute="leading" constant="12" id="2IS-D9-Xi3"/>
+                        <constraint firstItem="fJy-WD-1Xu" firstAttribute="leading" secondItem="5AL-WX-64M" secondAttribute="leading" constant="12" id="Ahh-Kp-Z02"/>
+                        <constraint firstAttribute="trailing" secondItem="fJy-WD-1Xu" secondAttribute="trailing" constant="12" id="Dbh-Ox-LKC"/>
+                        <constraint firstItem="N9s-dk-oQo" firstAttribute="top" secondItem="5AL-WX-64M" secondAttribute="top" constant="36" id="QQp-Ab-AZX"/>
+                        <constraint firstItem="fJy-WD-1Xu" firstAttribute="top" secondItem="N9s-dk-oQo" secondAttribute="bottom" constant="12" id="QfY-9U-F3b"/>
+                        <constraint firstAttribute="bottom" secondItem="f1w-fd-L5s" secondAttribute="bottom" constant="12" id="cLc-h4-Xao"/>
+                        <constraint firstItem="N9s-dk-oQo" firstAttribute="centerX" secondItem="5AL-WX-64M" secondAttribute="centerX" id="j4i-2R-ffd"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4Ue-SA-3Fn" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Apc-EF-VAQ"/>
+                <constraint firstItem="5AL-WX-64M" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="CJG-ta-NWa"/>
+                <constraint firstItem="4Ue-SA-3Fn" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="dK0-N2-8VA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5AL-WX-64M" secondAttribute="bottom" id="eFs-8c-eCV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5AL-WX-64M" secondAttribute="trailing" constant="8" id="gSK-E0-EgD"/>
+                <constraint firstItem="5AL-WX-64M" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="nBq-U8-G7W"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

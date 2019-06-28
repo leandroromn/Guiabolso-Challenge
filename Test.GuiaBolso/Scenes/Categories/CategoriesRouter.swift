@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol CategoriesRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToJoke()
 }
 
 protocol CategoriesDataPassing {
@@ -24,39 +24,20 @@ class CategoriesRouter: NSObject, CategoriesRoutingLogic, CategoriesDataPassing 
 
     weak var viewController: CategoriesViewController?
     var dataStore: CategoriesDataStore?
-
-    // MARK: Routing
-
-    /*
-    func routeToSomewhere(segue: UIStoryboardSegue?) {
-        if let segue = segue {
-            let destinationVC = segue.destination as! SomewhereViewController
-            var destinationDS = destinationVC.router!.dataStore!
-            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-            var destinationDS = destinationVC.router!.dataStore!
-            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-            navigateToSomewhere(source: viewController!, destination: destinationVC)
-        }
+    
+    func routeToJoke() {
+        let jokeViewController = JokeViewController(nibName: R.nib.jokeViewController.name, bundle: nil)
+        guard let dataStore = dataStore, let jokeRouter = jokeViewController.router, var jokeDataStore = jokeRouter.dataStore else { return }
+        passDataToJoke(source: dataStore, destination: &jokeDataStore)
+        navigateToJoke(source: viewController, destination: jokeViewController)
     }
-    */
-
-    // MARK: Navigation
-
-    /*
-    func navigateToSomewhere(source: CategoriesViewController, destination: SomewhereViewController) {
-        source.show(destination, sender: nil)
+    
+    func navigateToJoke(source: CategoriesViewController?, destination: JokeViewController) {
+        source?.navigationController?.pushViewController(destination, animated: true)
     }
-    */
-
-    // MARK: Passing data
-
-    /*
-    func passDataToSomewhere(source: CategoriesDataStore, destination: inout SomewhereDataStore) {
-        destination.name = source.name
+    
+    func passDataToJoke(source: CategoriesDataStore, destination: inout JokeDataStore) {
+        destination.category = source.category
     }
-    */
 
 }

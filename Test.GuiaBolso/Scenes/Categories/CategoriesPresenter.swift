@@ -10,12 +10,11 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
 protocol CategoriesPresentationLogic {
     func presentLoadingState()
     func presentDynamicData()
     func presentError(_ error: Error)
+    func presentRandomJoke()
 }
 
 class CategoriesPresenter: CategoriesPresentationLogic {
@@ -32,6 +31,10 @@ class CategoriesPresenter: CategoriesPresentationLogic {
     
     func presentError(_ error: Error) {
         viewController?.displayResponseError(message: error.localizedDescription)
+    }
+    
+    func presentRandomJoke() {
+        viewController?.displayRandomJoke()
     }
     
 }

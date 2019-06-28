@@ -6,8 +6,6 @@
 //  Copyright © 2019 Leandro Romano. All rights reserved.
 //
 
-import Foundation
-
 extension Endpoint {
     
     static func getCategories() -> Endpoint {

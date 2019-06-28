@@ -12,6 +12,7 @@ protocol CategoriesDisplayLogic: class {
     func displayLoadingState()
     func displayDynamicData()
     func displayResponseError(message errorMessage: String)
+    func displayRandomJoke()
 }
 
 extension CategoriesViewController: CategoriesDisplayLogic {
@@ -38,6 +39,10 @@ extension CategoriesViewController: CategoriesDisplayLogic {
             preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: R.string.categories.error_button(), style: .default))
         present(alert, animated: true)
+    }
+    
+    func displayRandomJoke() {
+        router?.routeToJoke()
     }
     
 }

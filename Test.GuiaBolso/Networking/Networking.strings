@@ -10,3 +10,6 @@ scheme = "https";
 host = "api.chucknorris.io";
 
 categories_url = "/jokes/categories";
+jokes_url = "/jokes/random";
+
+category_query_param = "category";

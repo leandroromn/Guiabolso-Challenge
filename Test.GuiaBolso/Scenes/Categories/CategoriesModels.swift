@@ -10,12 +10,4 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
-enum Categories {
-  
-    struct Response: Codable {
-        
-    }
-
-}
+enum Categories { }

@@ -10,8 +10,6 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
 protocol CategoriesBusinessLogic {
     
     var numberOfRows: Int { get }
@@ -20,16 +18,18 @@ protocol CategoriesBusinessLogic {
     func requestCategories()
     func cellForRow(at index: Int) -> String
     func didSelect(at index: Int)
+    
 }
 
 protocol CategoriesDataStore {
-    //var name: String { get set }
+    var category: String? { get }
 }
 
 class CategoriesInteractor: CategoriesBusinessLogic, CategoriesDataStore {
 
     var presenter: CategoriesPresentationLogic?
     var worker: CategoriesWorker?
+    var category: String?
     var categories = [String]()
     var numberOfRows: Int {
         return categories.count
@@ -61,7 +61,8 @@ class CategoriesInteractor: CategoriesBusinessLogic, CategoriesDataStore {
     }
     
     func didSelect(at index: Int) {
-        
+        category = categories[index]
+        presenter?.presentRandomJoke()
     }
 
 }

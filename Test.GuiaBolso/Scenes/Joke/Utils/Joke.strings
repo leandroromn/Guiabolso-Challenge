@@ -1,0 +1,13 @@
+/* 
+  Joke.strings
+  Test.GuiaBolso
+
+  Created by Leandro Romano on 28/06/19.
+  Copyright © 2019 Leandro Romano. All rights reserved.
+*/
+
+error_title = "Error!";
+error_message = "An error was found. Please, try again.";
+error_button = "Return to categories";
+
+visit_page_button = "Go to the official page";
