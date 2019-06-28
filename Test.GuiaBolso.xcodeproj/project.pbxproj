@@ -22,6 +22,7 @@
 		FDE4864822C5AD9F003C0E83 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4864222C5AD9F003C0E83 /* CategoriesViewController.swift */; };
 		FDE4864922C5AD9F003C0E83 /* CategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4864322C5AD9F003C0E83 /* CategoriesInteractor.swift */; };
 		FDE4864C22C5ADC4003C0E83 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE4864B22C5ADC4003C0E83 /* Categories.storyboard */; };
+		FDE4865222C5AF51003C0E83 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4865122C5AF51003C0E83 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		FDE4864222C5AD9F003C0E83 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		FDE4864322C5AD9F003C0E83 /* CategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInteractor.swift; sourceTree = "<group>"; };
 		FDE4864B22C5ADC4003C0E83 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
+		FDE4865122C5AF51003C0E83 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,8 +186,9 @@
 		FDE4863B22C5ACA2003C0E83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FDD7BDFA22C5A86700B991F5 /* LaunchScreen.storyboard */,
 				FDD7BDF822C5A86700B991F5 /* Assets.xcassets */,
+				FDE4865122C5AF51003C0E83 /* R.generated.swift */,
+				FDD7BDFA22C5A86700B991F5 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildConfigurationList = FDD7BE1622C5A86700B991F5 /* Build configuration list for PBXNativeTarget "Test.GuiaBolso" */;
 			buildPhases = (
 				2DBCA56E6F38DB019C239DCA /* [CP] Check Pods Manifest.lock */,
+				FDE4865022C5AEBA003C0E83 /* R.swift */,
 				FDD7BDEA22C5A86600B991F5 /* Sources */,
 				FDD7BDEB22C5A86600B991F5 /* Frameworks */,
 				FDD7BDEC22C5A86600B991F5 /* Resources */,
@@ -468,6 +472,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FDE4865022C5AEBA003C0E83 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -478,6 +502,7 @@
 				FDE4864722C5AD9F003C0E83 /* CategoriesModels.swift in Sources */,
 				FDE4864622C5AD9F003C0E83 /* CategoriesRouter.swift in Sources */,
 				FDE4864822C5AD9F003C0E83 /* CategoriesViewController.swift in Sources */,
+				FDE4865222C5AF51003C0E83 /* R.generated.swift in Sources */,
 				FDE4864422C5AD9F003C0E83 /* CategoriesPresenter.swift in Sources */,
 				FDE4864922C5AD9F003C0E83 /* CategoriesInteractor.swift in Sources */,
 				FDD7BDF222C5A86600B991F5 /* AppDelegate.swift in Sources */,
