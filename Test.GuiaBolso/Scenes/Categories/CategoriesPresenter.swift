@@ -13,18 +13,25 @@
 import UIKit
 
 protocol CategoriesPresentationLogic {
-    func presentSomething(response: Categories.Something.Response)
+    func presentLoadingState()
+    func presentDynamicData()
+    func presentError(_ error: Error)
 }
 
 class CategoriesPresenter: CategoriesPresentationLogic {
 
     weak var viewController: CategoriesDisplayLogic?
 
-    // MARK: Do something
-
-    func presentSomething(response: Categories.Something.Response) {
-        let viewModel = Categories.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentLoadingState() {
+        viewController?.displayLoadingState()
+    }
+    
+    func presentDynamicData() {
+        viewController?.displayDynamicData()
+    }
+    
+    func presentError(_ error: Error) {
+        viewController?.displayResponseError(message: error.localizedDescription)
     }
     
 }

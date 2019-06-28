@@ -10,10 +10,14 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
+import PromiseKit
 
 class CategoriesWorker {
 
-    func doSomeWork() { }
+    let networkProvider = NetworkProvider()
+    
+    func getCategories() -> Promise<[String]> {
+        return networkProvider.request(.getCategories())
+    }
 
 }

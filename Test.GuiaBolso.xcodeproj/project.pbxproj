@@ -27,6 +27,11 @@
 		FDE4865722C5B03F003C0E83 /* Networking.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDE4865622C5B03F003C0E83 /* Networking.strings */; };
 		FDE4865922C5B08C003C0E83 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4865822C5B08C003C0E83 /* NetworkProvider.swift */; };
 		FDE4865C22C5B22F003C0E83 /* Endpoint+Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4865B22C5B22F003C0E83 /* Endpoint+Categories.swift */; };
+		FDE4865E22C5B50C003C0E83 /* CategoriesViewController+DisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4865D22C5B50C003C0E83 /* CategoriesViewController+DisplayLogic.swift */; };
+		FDE4866122C5B606003C0E83 /* Categories.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDE4866022C5B606003C0E83 /* Categories.strings */; };
+		FDE4866522C5B83D003C0E83 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4866322C5B83D003C0E83 /* CategoryTableViewCell.swift */; };
+		FDE4866622C5B83D003C0E83 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDE4866422C5B83D003C0E83 /* CategoryTableViewCell.xib */; };
+		FDE4866822C5BC59003C0E83 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4866722C5BC59003C0E83 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +84,11 @@
 		FDE4865622C5B03F003C0E83 /* Networking.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Networking.strings; sourceTree = "<group>"; };
 		FDE4865822C5B08C003C0E83 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		FDE4865B22C5B22F003C0E83 /* Endpoint+Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Categories.swift"; sourceTree = "<group>"; };
+		FDE4865D22C5B50C003C0E83 /* CategoriesViewController+DisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesViewController+DisplayLogic.swift"; sourceTree = "<group>"; };
+		FDE4866022C5B606003C0E83 /* Categories.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Categories.strings; sourceTree = "<group>"; };
+		FDE4866322C5B83D003C0E83 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		FDE4866422C5B83D003C0E83 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		FDE4866722C5BC59003C0E83 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +169,7 @@
 			children = (
 				FDE4863C22C5ACBD003C0E83 /* Scenes */,
 				FDE4865322C5AFDE003C0E83 /* Networking */,
-				FDE4863A22C5AC98003C0E83 /* Support Files */,
+				FDE4863A22C5AC98003C0E83 /* Supporting Files */,
 				FDE4863B22C5ACA2003C0E83 /* Resources */,
 			);
 			path = Test.GuiaBolso;
@@ -183,21 +193,22 @@
 			path = Test.GuiaBolsoUITests;
 			sourceTree = "<group>";
 		};
-		FDE4863A22C5AC98003C0E83 /* Support Files */ = {
+		FDE4863A22C5AC98003C0E83 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				FDD7BDFD22C5A86700B991F5 /* Info.plist */,
 				FDD7BDF122C5A86600B991F5 /* AppDelegate.swift */,
 			);
-			path = "Support Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		FDE4863B22C5ACA2003C0E83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				FDD7BDF822C5A86700B991F5 /* Assets.xcassets */,
-				FDE4865122C5AF51003C0E83 /* R.generated.swift */,
 				FDD7BDFA22C5A86700B991F5 /* LaunchScreen.storyboard */,
+				FDE4865122C5AF51003C0E83 /* R.generated.swift */,
+				FDE4866722C5BC59003C0E83 /* Colors.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,8 +224,11 @@
 		FDE4863D22C5AD20003C0E83 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				FDE4865F22C5B5FB003C0E83 /* Utils */,
 				FDE4864A22C5ADB6003C0E83 /* Views */,
+				FDE4866222C5B828003C0E83 /* Cells */,
 				FDE4864222C5AD9F003C0E83 /* CategoriesViewController.swift */,
+				FDE4865D22C5B50C003C0E83 /* CategoriesViewController+DisplayLogic.swift */,
 				FDE4864322C5AD9F003C0E83 /* CategoriesInteractor.swift */,
 				FDE4863E22C5AD9F003C0E83 /* CategoriesPresenter.swift */,
 				FDE4863F22C5AD9F003C0E83 /* CategoriesWorker.swift */,
@@ -249,6 +263,23 @@
 				FDE4865B22C5B22F003C0E83 /* Endpoint+Categories.swift */,
 			);
 			path = "Endpoint Providers";
+			sourceTree = "<group>";
+		};
+		FDE4865F22C5B5FB003C0E83 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FDE4866022C5B606003C0E83 /* Categories.strings */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FDE4866222C5B828003C0E83 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FDE4866322C5B83D003C0E83 /* CategoryTableViewCell.swift */,
+				FDE4866422C5B83D003C0E83 /* CategoryTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,7 +393,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDD7BDFC22C5A86700B991F5 /* LaunchScreen.storyboard in Resources */,
+				FDE4866122C5B606003C0E83 /* Categories.strings in Resources */,
 				FDE4864C22C5ADC4003C0E83 /* Categories.storyboard in Resources */,
+				FDE4866622C5B83D003C0E83 /* CategoryTableViewCell.xib in Resources */,
 				FDE4865722C5B03F003C0E83 /* Networking.strings in Resources */,
 				FDD7BDF922C5A86700B991F5 /* Assets.xcassets in Resources */,
 			);
@@ -530,6 +563,8 @@
 			files = (
 				FDE4865C22C5B22F003C0E83 /* Endpoint+Categories.swift in Sources */,
 				FDE4864722C5AD9F003C0E83 /* CategoriesModels.swift in Sources */,
+				FDE4865E22C5B50C003C0E83 /* CategoriesViewController+DisplayLogic.swift in Sources */,
+				FDE4866822C5BC59003C0E83 /* Colors.swift in Sources */,
 				FDE4865522C5AFEB003C0E83 /* Endpoint.swift in Sources */,
 				FDE4864622C5AD9F003C0E83 /* CategoriesRouter.swift in Sources */,
 				FDE4864822C5AD9F003C0E83 /* CategoriesViewController.swift in Sources */,
@@ -538,6 +573,7 @@
 				FDE4864922C5AD9F003C0E83 /* CategoriesInteractor.swift in Sources */,
 				FDD7BDF222C5A86600B991F5 /* AppDelegate.swift in Sources */,
 				FDE4864522C5AD9F003C0E83 /* CategoriesWorker.swift in Sources */,
+				FDE4866522C5B83D003C0E83 /* CategoryTableViewCell.swift in Sources */,
 				FDE4865922C5B08C003C0E83 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -707,7 +743,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/Test.GuiaBolso/Support Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Test.GuiaBolso/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -726,7 +762,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/Test.GuiaBolso/Support Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Test.GuiaBolso/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

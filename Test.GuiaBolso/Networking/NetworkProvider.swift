@@ -19,7 +19,7 @@ enum NetworkError: Error {
     case unknownError
 }
 
-class NetworkProvider {
+struct NetworkProvider {
     
     func request<T: Codable>(_ endpoint: Endpoint) -> Promise<T> {
         return Promise { seal in

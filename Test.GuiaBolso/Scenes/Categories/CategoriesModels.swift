@@ -14,12 +14,8 @@ import UIKit
 
 enum Categories {
   
-    enum Something {
-        struct Request { }
+    struct Response: Codable {
         
-        struct Response { }
-
-        struct ViewModel { }
     }
 
 }

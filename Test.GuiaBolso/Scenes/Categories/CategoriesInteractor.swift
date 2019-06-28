@@ -13,7 +13,13 @@
 import UIKit
 
 protocol CategoriesBusinessLogic {
-    func doSomething(request: Categories.Something.Request)
+    
+    var numberOfRows: Int { get }
+    
+    func setupLoadingState()
+    func requestCategories()
+    func cellForRow(at index: Int) -> String
+    func didSelect(at index: Int)
 }
 
 protocol CategoriesDataStore {
@@ -24,16 +30,38 @@ class CategoriesInteractor: CategoriesBusinessLogic, CategoriesDataStore {
 
     var presenter: CategoriesPresentationLogic?
     var worker: CategoriesWorker?
-    //var name: String = ""
-
-    // MARK: Do something
-
-    func doSomething(request: Categories.Something.Request) {
-        worker = CategoriesWorker()
-        worker?.doSomeWork()
+    var categories = [String]()
+    var numberOfRows: Int {
+        return categories.count
+    }
+    
+    init(worker: CategoriesWorker = CategoriesWorker()) {
+        self.worker = worker
+    }
+    
+    func setupLoadingState() {
+        presenter?.presentLoadingState()
+    }
+    
+    func requestCategories() {
+        worker?.getCategories().done(handleResponseSuccess).catch(handleResponseError)
+    }
+    
+    private func handleResponseSuccess(_ response: [String]) {
+        categories = response
+        presenter?.presentDynamicData()
+    }
+    
+    private func handleResponseError(_ error: Error) {
+        presenter?.presentError(error)
+    }
+    
+    func cellForRow(at index: Int) -> String {
+        return categories[index]
+    }
+    
+    func didSelect(at index: Int) {
         
-        let response = Categories.Something.Response()
-        presenter?.presentSomething(response: response)
     }
 
 }

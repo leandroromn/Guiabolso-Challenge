@@ -12,16 +12,11 @@
 
 import UIKit
 
-protocol CategoriesDisplayLogic: class {
-    func displaySomething(viewModel: Categories.Something.ViewModel)
-}
-
-class CategoriesViewController: UIViewController, CategoriesDisplayLogic {
+class CategoriesViewController: UITableViewController {
 
     var interactor: CategoriesBusinessLogic?
     var router: (NSObjectProtocol & CategoriesRoutingLogic & CategoriesDataPassing)?
-
-    // MARK: Object lifecycle
+    weak var activityIndicatorView: UIActivityIndicatorView!
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -32,8 +27,6 @@ class CategoriesViewController: UIViewController, CategoriesDisplayLogic {
         super.init(coder: aDecoder)
         setup()
     }
-
-    // MARK: Setup
 
     private func setup() {
         let viewController = self
@@ -47,36 +40,47 @@ class CategoriesViewController: UIViewController, CategoriesDisplayLogic {
         router.viewController = viewController
         router.dataStore = interactor
     }
-
-    // MARK: Routing
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
-
-    // MARK: View lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        setupTableView()
+        requestCategories()
     }
-
-    // MARK: Do something
-
-    //@IBOutlet weak var nameTextField: UITextField!
-
-    func doSomething() {
-        let request = Categories.Something.Request()
-        interactor?.doSomething(request: request)
+    
+    fileprivate func setupTableView() {
+        title = R.string.categories.title()
+        tableView.tableFooterView = UIView()
+        tableView.register(
+            UINib(nibName: R.nib.categoryTableViewCell.name, bundle: nil),
+            forCellReuseIdentifier: CategoryTableViewCell.identifier
+        )
     }
-
-    func displaySomething(viewModel: Categories.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    
+    fileprivate func requestCategories() {
+        interactor?.setupLoadingState()
+        interactor?.requestCategories()
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return interactor?.numberOfRows ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: CategoryTableViewCell.identifier,
+            for: indexPath) as? CategoryTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        if let viewModel = interactor?.cellForRow(at: indexPath.row) {
+            cell.categoryNameLabel.text = viewModel.capitalized
+        }
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
