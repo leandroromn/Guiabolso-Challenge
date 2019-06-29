@@ -28,7 +28,7 @@ class VisitPageButton: UIButton {
         contentEdgeInsets = UIEdgeInsets(top: 14, left: 0, bottom: 14, right: 0)
         layer.cornerRadius = 24
         layer.borderWidth = 2.0
-        layer.borderColor = Colors.secondary.cgColor
+        layer.borderColor = Colors.darkYellow.cgColor
     }
 
 }
