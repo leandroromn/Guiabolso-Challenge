@@ -50,9 +50,10 @@ class JokeViewController: UIViewController {
         if #available(iOS 11.0, *) { navigationItem.largeTitleDisplayMode = .never }
         contentView.alpha = 0.0
         interactor?.setupViewTitle()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(requestRandomJoke))
     }
     
-    fileprivate func requestRandomJoke() {
+    @objc fileprivate func requestRandomJoke() {
         interactor?.setupLoadingState()
         interactor?.requestRandomJoke()
     }

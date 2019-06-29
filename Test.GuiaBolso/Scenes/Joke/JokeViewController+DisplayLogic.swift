@@ -26,6 +26,8 @@ extension JokeViewController: JokeDisplayLogic {
     }
     
     func displayLoadingState() {
+        reproduceAnimation { self.contentView.alpha = 0.0 }
+        activityIndicator.color = Colors.main
         activityIndicator.startAnimating()
     }
     

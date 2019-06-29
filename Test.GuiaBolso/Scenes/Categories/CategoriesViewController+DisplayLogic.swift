@@ -18,7 +18,8 @@ protocol CategoriesDisplayLogic: class {
 extension CategoriesViewController: CategoriesDisplayLogic {
     
     func displayLoadingState() {
-        let activityIndicatorView = UIActivityIndicatorView(style: .gray)
+        let activityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
+        activityIndicatorView.color = Colors.main
         activityIndicatorView.hidesWhenStopped = true
         tableView.backgroundView = activityIndicatorView
         self.activityIndicatorView = activityIndicatorView
