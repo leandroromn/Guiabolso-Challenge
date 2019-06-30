@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Cuckoo
 @testable import Test_GuiaBolso
 
 class Test_GuiaBolsoTests: XCTestCase {

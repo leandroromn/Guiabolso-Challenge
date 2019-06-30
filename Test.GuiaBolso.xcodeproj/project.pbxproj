@@ -10,6 +10,7 @@
 		02174519F435E56D38B5B7FD /* Pods_Test_GuiaBolso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D286B738790CD5E6903CA20 /* Pods_Test_GuiaBolso.framework */; };
 		236F345F862B53C7ADC63A64 /* Pods_Test_GuiaBolsoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C11A885308AC2164638288B /* Pods_Test_GuiaBolsoUITests.framework */; };
 		56305E44F2AD6FA6A63623D6 /* Pods_Test_GuiaBolsoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E0904816E3134680E0985F /* Pods_Test_GuiaBolsoTests.framework */; };
+		FDC3168022C8296200CBEA84 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3167F22C8296200CBEA84 /* GeneratedMocks.swift */; };
 		FDD7BDF222C5A86600B991F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7BDF122C5A86600B991F5 /* AppDelegate.swift */; };
 		FDD7BDF922C5A86700B991F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD7BDF822C5A86700B991F5 /* Assets.xcassets */; };
 		FDD7BDFC22C5A86700B991F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD7BDFA22C5A86700B991F5 /* LaunchScreen.storyboard */; };
@@ -72,6 +73,7 @@
 		74E0904816E3134680E0985F /* Pods_Test_GuiaBolsoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_GuiaBolsoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B5FF139C7A32C7EC959978 /* Pods-Test.GuiaBolsoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.GuiaBolsoTests.release.xcconfig"; path = "Target Support Files/Pods-Test.GuiaBolsoTests/Pods-Test.GuiaBolsoTests.release.xcconfig"; sourceTree = "<group>"; };
 		F4C0DFA07BA2FC9742622570 /* Pods-Test.GuiaBolsoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.GuiaBolsoTests.debug.xcconfig"; path = "Target Support Files/Pods-Test.GuiaBolsoTests/Pods-Test.GuiaBolsoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDC3167F22C8296200CBEA84 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		FDD7BDEE22C5A86600B991F5 /* Test.GuiaBolso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.GuiaBolso.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD7BDF122C5A86600B991F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDD7BDF822C5A86700B991F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				FDD7BE0622C5A86700B991F5 /* Test_GuiaBolsoTests.swift */,
+				FDC3167F22C8296200CBEA84 /* GeneratedMocks.swift */,
 				FDD7BE0822C5A86700B991F5 /* Info.plist */,
 			);
 			path = Test.GuiaBolsoTests;
@@ -348,6 +351,7 @@
 			buildPhases = (
 				2DBCA56E6F38DB019C239DCA /* [CP] Check Pods Manifest.lock */,
 				FDE4865022C5AEBA003C0E83 /* R.swift */,
+				FDC3167E22C828A700CBEA84 /* Cuckoo */,
 				FDD7BDEA22C5A86600B991F5 /* Sources */,
 				FDD7BDEB22C5A86600B991F5 /* Frameworks */,
 				FDD7BDEC22C5A86600B991F5 /* Resources */,
@@ -593,6 +597,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FDC3167E22C828A700CBEA84 /* Cuckoo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Cuckoo;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "OUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\n\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Scenes/Categories/CategoriesPresenter.swift\" \\\n\"${INPUT_DIR}/Scenes/Categories/CategoriesWorker.swift\" \\\n\"${INPUT_DIR}/Scenes/Joke/JokePresenter.swift\" \\\n\"${INPUT_DIR}/Scenes/Joke/JokeWorker.swift\"\n";
+		};
 		FDE4865022C5AEBA003C0E83 /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -651,6 +673,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDD7BE0722C5A86700B991F5 /* Test_GuiaBolsoTests.swift in Sources */,
+				FDC3168022C8296200CBEA84 /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,6 +834,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Test.GuiaBolso/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -830,6 +854,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Test.GuiaBolso/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

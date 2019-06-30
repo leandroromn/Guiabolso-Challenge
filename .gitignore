@@ -131,3 +131,4 @@ iOSInjectionProject/
 
 # End of https://www.gitignore.io/api/swift,xcode,macos,cocoapods
 R.generated.swift
+Test.GuiaBolsoTests/GeneratedMocks.swift
