@@ -16,6 +16,7 @@
                 <outlet property="avatarImageView" destination="N9s-dk-oQo" id="yUr-Fh-BoC"/>
                 <outlet property="contentView" destination="5AL-WX-64M" id="ciX-Mh-a9z"/>
                 <outlet property="jokePhraseLabel" destination="fJy-WD-1Xu" id="RCy-Qr-HmA"/>
+                <outlet property="jokeUrlPageButton" destination="f1w-fd-L5s" id="b3Z-ZS-d4D"/>
                 <outlet property="view" destination="iN0-l3-epB" id="fDF-Js-9Py"/>
             </connections>
         </placeholder>

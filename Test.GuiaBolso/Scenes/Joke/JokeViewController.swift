@@ -43,6 +43,7 @@ class JokeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupAccessibilityIdentifiers()
         requestRandomJoke()
     }
     
@@ -51,6 +52,12 @@ class JokeViewController: UIViewController {
         contentView.alpha = 0.0
         interactor?.setupViewTitle()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(requestRandomJoke))
+    }
+    
+    fileprivate func setupAccessibilityIdentifiers() {
+        avatarImageView.accessibilityIdentifier = JokeAccessibilityIdentifier.chuckNorrisAvatarImage.rawValue
+        jokePhraseLabel.accessibilityIdentifier = JokeAccessibilityIdentifier.chuckNorrisRandomJokePhrase.rawValue
+        jokeUrlPageButton.accessibilityIdentifier = JokeAccessibilityIdentifier.chuckNorrisButtonToJokePage.rawValue
     }
     
     @objc fileprivate func requestRandomJoke() {
@@ -62,6 +69,7 @@ class JokeViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var jokePhraseLabel: UILabel!
+    @IBOutlet weak var jokeUrlPageButton: VisitPageButton!
     
     @IBAction func openJokeLinkAct(_ sender: Any) {
         interactor?.requestOpenJokePage()

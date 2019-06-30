@@ -13,6 +13,9 @@
 		FDC3168022C8296200CBEA84 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3167F22C8296200CBEA84 /* GeneratedMocks.swift */; };
 		FDC3168422C83FC500CBEA84 /* CategoriesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3168322C83FC500CBEA84 /* CategoriesInteractorTests.swift */; };
 		FDC3168722C8506400CBEA84 /* JokeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3168622C8506400CBEA84 /* JokeInteractorTests.swift */; };
+		FDC3168A22C9113300CBEA84 /* XCTestCase+WaitForElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3168922C9113300CBEA84 /* XCTestCase+WaitForElement.swift */; };
+		FDC3168D22C9584B00CBEA84 /* JokeAccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3168C22C9584B00CBEA84 /* JokeAccessibilityIdentifier.swift */; };
+		FDC3168E22C9590E00CBEA84 /* JokeAccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3168C22C9584B00CBEA84 /* JokeAccessibilityIdentifier.swift */; };
 		FDD7BDF222C5A86600B991F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD7BDF122C5A86600B991F5 /* AppDelegate.swift */; };
 		FDD7BDF922C5A86700B991F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD7BDF822C5A86700B991F5 /* Assets.xcassets */; };
 		FDD7BDFC22C5A86700B991F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD7BDFA22C5A86700B991F5 /* LaunchScreen.storyboard */; };
@@ -77,6 +80,8 @@
 		FDC3167F22C8296200CBEA84 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		FDC3168322C83FC500CBEA84 /* CategoriesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInteractorTests.swift; sourceTree = "<group>"; };
 		FDC3168622C8506400CBEA84 /* JokeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeInteractorTests.swift; sourceTree = "<group>"; };
+		FDC3168922C9113300CBEA84 /* XCTestCase+WaitForElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+WaitForElement.swift"; sourceTree = "<group>"; };
+		FDC3168C22C9584B00CBEA84 /* JokeAccessibilityIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAccessibilityIdentifier.swift; sourceTree = "<group>"; };
 		FDD7BDEE22C5A86600B991F5 /* Test.GuiaBolso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.GuiaBolso.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD7BDF122C5A86600B991F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDD7BDF822C5A86700B991F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -193,6 +198,22 @@
 			path = Joke;
 			sourceTree = "<group>";
 		};
+		FDC3168822C9112200CBEA84 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDC3168922C9113300CBEA84 /* XCTestCase+WaitForElement.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FDC3168B22C9581E00CBEA84 /* Accessibility */ = {
+			isa = PBXGroup;
+			children = (
+				FDC3168C22C9584B00CBEA84 /* JokeAccessibilityIdentifier.swift */,
+			);
+			path = Accessibility;
+			sourceTree = "<group>";
+		};
 		FDD7BDE522C5A86600B991F5 = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +241,7 @@
 			children = (
 				FDE4863C22C5ACBD003C0E83 /* Scenes */,
 				FDE4865322C5AFDE003C0E83 /* Networking */,
+				FDC3168B22C9581E00CBEA84 /* Accessibility */,
 				FDE4863A22C5AC98003C0E83 /* Supporting Files */,
 				FDE4863B22C5ACA2003C0E83 /* Resources */,
 			);
@@ -239,6 +261,7 @@
 		FDD7BE1022C5A86700B991F5 /* Test.GuiaBolsoUITests */ = {
 			isa = PBXGroup;
 			children = (
+				FDC3168822C9112200CBEA84 /* Extensions */,
 				FDD7BE1122C5A86700B991F5 /* Test_GuiaBolsoUITests.swift */,
 				FDD7BE1322C5A86700B991F5 /* Info.plist */,
 			);
@@ -656,7 +679,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -677,6 +700,7 @@
 				FDE4865522C5AFEB003C0E83 /* Endpoint.swift in Sources */,
 				FDE4867422C5C3EB003C0E83 /* JokeViewController.swift in Sources */,
 				FDE4867C22C5C835003C0E83 /* Endpoint+Jokes.swift in Sources */,
+				FDC3168D22C9584B00CBEA84 /* JokeAccessibilityIdentifier.swift in Sources */,
 				FDE4868122C5D273003C0E83 /* VisitPageButton.swift in Sources */,
 				FDE4867522C5C3EB003C0E83 /* JokeInteractor.swift in Sources */,
 				FDE4867222C5C3EB003C0E83 /* JokeRouter.swift in Sources */,
@@ -709,7 +733,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC3168A22C9113300CBEA84 /* XCTestCase+WaitForElement.swift in Sources */,
 				FDD7BE1222C5A86700B991F5 /* Test_GuiaBolsoUITests.swift in Sources */,
+				FDC3168E22C9590E00CBEA84 /* JokeAccessibilityIdentifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
