@@ -1,7 +1,7 @@
-# Test Guia Bolso
+# Test Guiabolso
 ### Chuck Norris Jokes API
 
-Versão mínima: iOS 9
+Versão mínima: iOS 9</br>
 Linguagem: Swift</br>
 
 ### Sobre:
