@@ -17,9 +17,9 @@ target 'Test.GuiaBolso' do
     pod "Nimble", "8.0.2"
   end
 
-  target 'Test.GuiaBolsoUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+end
 
+target 'Test.GuiaBolsoUITests' do
+  inherit! :search_paths
+  # Pods for testing
 end
