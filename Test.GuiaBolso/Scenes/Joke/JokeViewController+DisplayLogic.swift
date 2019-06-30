@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SDWebImage
+import SafariServices
 
 protocol JokeDisplayLogic: class {
     func displayView(title viewTitle: String)
@@ -65,7 +66,7 @@ extension JokeViewController: JokeDisplayLogic {
     
     func displayJokePageBy(url jokeUrl: String) {
         guard let url = URL(string: jokeUrl) else { return }
-        UIApplication.shared.openURL(url)
+        present(SFSafariViewController(url: url), animated: true)
     }
     
 }
