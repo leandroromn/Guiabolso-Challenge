@@ -56,7 +56,7 @@ class CategoriesViewController: UITableViewController {
         )
     }
     
-    fileprivate func requestCategories() {
+    func requestCategories() {
         interactor?.setupLoadingState()
         interactor?.requestCategories()
     }

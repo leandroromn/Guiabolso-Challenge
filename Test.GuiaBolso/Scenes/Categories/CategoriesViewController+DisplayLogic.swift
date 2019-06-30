@@ -38,7 +38,10 @@ extension CategoriesViewController: CategoriesDisplayLogic {
             title: R.string.categories.error_title(),
             message: R.string.categories.error_message(),
             preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: R.string.categories.error_button(), style: .default))
+        let reloadAction = UIAlertAction(title: R.string.categories.error_button(), style: .default) { _ in
+            self.requestCategories()
+        }
+        alert.addAction(reloadAction)
         present(alert, animated: true)
     }
     

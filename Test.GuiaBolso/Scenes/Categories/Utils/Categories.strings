@@ -10,4 +10,4 @@ title = "Categories";
 
 error_title = "Error!";
 error_message = "An error was found. Please, try again.";
-error_button = "Close";
+error_button = "Try Again";
